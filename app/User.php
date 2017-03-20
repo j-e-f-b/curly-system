@@ -29,4 +29,24 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function School_Users()
+    {
+        return $this->belongsTo('SchoolUser');
+    }
+
+    public function Groups()
+    {
+        return $this->hasMany('GroupUser');
+    }
+
+    public function profile()
+    {
+        return $this->hasOne('Profile');
+    }
+
+    public function articles()
+    {
+        return $this->hasMany('Article');
+    }
 }

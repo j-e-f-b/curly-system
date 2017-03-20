@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Content extends Model
+class ArticleFile extends Model
 {
-    protected $table = 'article_contents';
+    protected $table = 'article_files';
     public $timestamps = true;
 
     public function article()
